@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="./src/input.css">
   <title>Calculator</title>
 </head>
-<body class="relative overflow-clip z-0 px-2 w-screen h-screen flex items-center justify-center bg-[#daf0fe]">
-  <div id="backgroud" class="absolute hidden sm:w-[75vh] h-[75vh] rounded-full top-0 left-25 bg-linear-90 from-cyan-400 to-blue-700  z-1"></div>
-  <div class="absolute overflow-clip z-2 aspect-2/3 pt-32 pb-16 px-8 flex flex-col gap-20 bg-calc-background rounded-4xl shadow-main">
-    <div id="blurEffect" class="absolute w-45 h-26 bg-primary rounded-2xl blur-2xl -top-10 -right-4 z-3"></div>
-    <div id="display" class="flex flex-col gap-2 items-end text-white z-10 min-h-[120px] justify-end">
-      <span id="small-display" class="text-2xl text-Secondary-light font-inter min-h-[32px] flex items-end justify-end">213</span>
+<body id="full-container" class="px-2 w-screen h-screen flex items-center justify-center ">
+  <div class="relative overflow-clip z-2 aspect-2/3 pt-32 pb-16 px-8 flex flex-col gap-20 bg-calc-background rounded-4xl shadow-main">
+    <div id="blurEffect" class="absolute w-45  h-26 bg-primary rounded-2xl blur-2xl -top-10 -right-4 z-3"></div>
+    <div id="display" class="flex flex-col gap-2 items-end z-10 min-h-[120px] justify-end">
+      <span id="small-display" class="text-2xl  font-inter min-h-[32px] flex items-end justify-end"></span>
       <span id="large-display" class="text-5xl font-inter min-h-[60px] flex items-end justify-end">45</span>
     </div>
     <div id="input-button" class="w-full h-full z-10 grid grid-cols-4 grid-rows-5 gap-4 text-white text-2xl">

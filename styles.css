@@ -1,0 +1,4 @@
+#full-container {
+  background: url('./src/img/bg.png') no-repeat center center fixed;
+  background-size: cover;
+}
