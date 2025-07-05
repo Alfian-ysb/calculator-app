@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/input.css">
+  <title>Calculator</title>
+</head>
+<body class="relative overflow-clip z-0 px-2 w-screen h-screen flex items-center justify-center bg-[#daf0fe]">
+  <div id="backgroud" class="absolute w-[75vh] h-[75vh] rounded-full top-0 left-25 bg-linear-90 from-cyan-400 to-blue-700  z-1"></div>
+  <div class="absolute overflow-clip z-2 aspect-2/3 pt-32 pb-16 px-8 flex flex-col gap-20 bg-calc-background rounded-4xl shadow-main">
+    <div id="blurEffect" class="absolute w-45 h-26 bg-primary rounded-2xl blur-2xl -top-10 -right-4 z-3"></div>
+    <div id="display" class="flex flex-col gap-2 items-end text-white z-10 min-h-[120px] justify-end">
+      <span id="small-display" class="text-2xl text-Secondary-light font-inter min-h-[32px] flex items-end justify-end">213</span>
+      <span id="large-display" class="text-5xl font-inter min-h-[60px] flex items-end justify-end">45</span>
+    </div>
+    <div id="input-button" class="w-full h-full z-10 grid grid-cols-4 grid-rows-5 gap-4 text-white text-2xl">
+      <button type="button" onclick="clearDisplay()" id="clearBtn" class=" bg-Secondary-light rounded-xl">C</button>
+      <button type="button" onclick="backspace()" id="backspaceBtn" class=" flex items-center justify-center  bg-Secondary-light rounded-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" height="50%" viewBox="0 -960 960 960" width="50%" fill="#d9d9d9">
+          <path d="m456-320 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Zm-96 160q-19 0-36-8.5T296-192L80-480l216-288q11-15 28-23.5t36-8.5h440q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H360ZM180-480l180 240h440v-480H360L180-480Zm400 0Z"/>
+        </svg>
+      </button>
+      <button onclick="appendValue('/')" id="Division" class=" bg-primary rounded-xl">/</button>
+      <button onclick="appendValue('*')" id="Multiplication" class="  bg-primary rounded-xl">*</button>
+      <button onclick="appendValue('7')" id="numBtn7" class=" bg-Secondary-dark font-inter text-Accent rounded-xl ">7</button>
+      <button onclick="appendValue('8')" id="numBtn8" class=" bg-Secondary-dark font-inter text-Accent rounded-xl ">8</button>
+      <button onclick="appendValue('9')" id="numBtn9" class=" bg-Secondary-dark font-inter text-Accent rounded-xl ">9</button>
+      <button onclick="appendValue('-')" id="Subtraction" class="  bg-primary rounded-xl">-</button>
+      <button onclick="appendValue('4')" id="numBtn4" class=" bg-Secondary-dark font-inter text-Accent rounded-xl ">4</button>
+      <button onclick="appendValue('5')" id="numBtn5" class=" bg-Secondary-dark font-inter text-Accent rounded-xl ">5</button>
+      <button onclick="appendValue('6')" id="numBtn6" class=" bg-Secondary-dark font-inter text-Accent rounded-xl ">6</button>
+      <button onclick="appendValue('+')" id="Addition" class="  bg-primary rounded-xl">+</button>
+      <button onclick="appendValue('1')" id="numBtn1" class=" bg-Secondary-dark font-inter text-Accent rounded-xl ">1</button>
+      <button onclick="appendValue('2')" id="numBtn2" class=" bg-Secondary-dark font-inter text-Accent rounded-xl ">2</button>
+      <button onclick="appendValue('3')" id="numBtn3" class=" bg-Secondary-dark font-inter text-Accent rounded-xl ">3</button>
+      <button onclick="calculate()" id="equals" class=" row-span-2 bg-primary rounded-xl">=</button>
+      <button onclick="appendValue('0')" id="numBtn0" class=" col-span-2 bg-Secondary-dark rounded-xl">0</button>
+      <button onclick="appendValue('.')" id="coma" class="  bg-[#303135] rounded-xl">.</button>
+      
+    </div>
+    <div id="blurEffect" class="absolute w-60 h-50 bg-Accent rounded-2xl blur-3xl -rotate-45 -bottom-25 left-4 z-1"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
