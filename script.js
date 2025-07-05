@@ -1,9 +1,13 @@
+
+
 const largeDisplay = document.getElementById("large-display");
 const smallDisplay = document.getElementById("small-display");
 
 document.getElementById("small-display").textContent = "\u00A0"; // non-breaking space
 document.getElementById("large-display").textContent = "\u00A0"; // non-breaking space
 
+
+smallDisplay.style.color = "#626061";
 function appendValue(value) {
     // Jika display masih placeholder, ganti dengan value baru
     if (smallDisplay.textContent === "\u00A0") {
@@ -17,8 +21,6 @@ function appendValue(value) {
     
     // Adjust font size berdasarkan panjang input
     adjustSmallDisplayFontSize(smallDisplay.textContent.length);
-    
-    console.log("button clicked:", value);
 }
 
 function clearDisplay(){
@@ -50,6 +52,7 @@ function backspace() {
 }
 
 function calculate() {
+     // Set color ke abu-abu sebelum evaluasi
     try {
         const result = eval(smallDisplay.textContent);
         let resultString = result.toString();
@@ -65,7 +68,7 @@ function calculate() {
         }
         
         // Reset color jika sebelumnya error
-        largeDisplay.style.color = "";
+        largeDisplay.style.color = "#d9d9d9";
         largeDisplay.textContent = resultString;
         
         // Adjust font size berdasarkan panjang string
